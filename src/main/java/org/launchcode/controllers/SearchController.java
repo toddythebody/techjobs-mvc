@@ -31,6 +31,8 @@ public class SearchController {
         } else {
             jobs = JobData.findByColumnAndValue(searchType, searchTerm);
         }
+
+        model.addAttribute("checked", searchType);
         model.addAttribute("jobs", jobs);
         model.addAttribute("columns", ListController.columnChoices);
         return "search";
