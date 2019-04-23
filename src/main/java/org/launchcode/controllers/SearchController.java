@@ -19,6 +19,7 @@ public class SearchController {
     @RequestMapping(value = "")
     public String search(Model model) {
         model.addAttribute("columns", ListController.columnChoices);
+        model.addAttribute("checked", "all");
         return "search";
     }
 
